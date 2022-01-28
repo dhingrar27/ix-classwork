@@ -1,0 +1,36 @@
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-title fw-bold text-center mt-3">
+            Comments: 
+        </div>
+        <div class="card-body">
+            <hr>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" [(ngModel)] = "comment"></textarea>
+                <label for="floatingTextarea2">Comments..</label>
+            </div>
+            <br>
+            <button type="button" class="btn btn-outline-secondary" (click)= "commentClicked()" data-bs-toggle="modal" data-bs-target="#commentModal">Submit</button>
+        </div>
+    </div>
+    
+
+<!-- Modal -->
+<div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Comment Recieved</h5>
+        </div>
+        <div class="modal-body">
+          Thank you so much for contacting us! Your comments are value. 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+</div>
+

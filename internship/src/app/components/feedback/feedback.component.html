@@ -1,0 +1,43 @@
+<div class="container mt-5">
+    <div class="card px-5 py-5">
+        <div class="card-title fw-bold text-center">
+            Feedback & Contact
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputPassword1">First Name</label>
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  id="firstname" 
+                  placeholder="First Name" 
+                  [(ngModel)] ="feedback.fname"
+                  name = "fname"
+                />
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Last Name</label>
+                <input type="text" class="form-control" id="lastname" placeholder="Last Name" [(ngModel)] = "feedback.lname" name="lname"/>
+              </div>
+              <br>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)] = "feedback.email" name="email"/>
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="project">Project Name</label>
+              <input type="text" class="form-control" id="project" placeholder="Project Name" [(ngModel)] = "feedback.pname" name="pname"/>
+            </div>
+            <br>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" [(ngModel)] = "feedback.fback" name="feedback"></textarea>
+                <label for="floatingTextarea2">Feedback about project..</label>
+            </div>
+            <br>
+            <button type="button" class="btn btn-outline-secondary" (click)="fsubmitClicked()" [disabled]="this.feedback.fname == null || this.feedback.lname == null || this.feedback.email == null" >Submit</button>
+        </form>
+    </div>
+</div>
